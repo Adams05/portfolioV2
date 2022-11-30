@@ -1,6 +1,7 @@
 import '../assets/styles/styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/fontawesome-free-solid'
+import Logo from '../assets/images/logo.png';
 
 const Navbar = () => {
 const showMenu = () => {
@@ -10,9 +11,8 @@ const showMenu = () => {
 
   return (
     <>
-     <div className="mobile-nav show">
+     <div className="mobile-nav">
       <div className="top-nav-section">
-        <div className="logo">Frankie Adams</div>
         <FontAwesomeIcon icon={faBars} className='mobile-bars' id="bars" onClick={showMenu}/>
         </div>
         <div className="mobile-list">
@@ -23,9 +23,12 @@ const showMenu = () => {
             <a href='../frankie-adams-dev.pdf' target="_blank"><li>Resume</li></a>
           </ul>
         </div>
+        <div>
+          <img src={Logo} alt='logo' className='logo-img'/>
+        </div>
       </div>
       <div className='navbar'>
-        <div className="logo">Frankie Adams</div>
+      <div className="logo"><a href="/"><img src={Logo} alt='logo' className='logo-img'/></a></div>
         <FontAwesomeIcon icon={faBars} className='bars' onClick={showMenu}/>
         <div className="nav-list">     
           <ul>
