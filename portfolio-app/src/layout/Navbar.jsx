@@ -7,6 +7,11 @@ const Navbar = () => {
 const showMenu = () => {
   const menu = document.querySelector('.mobile-nav');
   menu.classList.toggle('show');
+
+  if(menu.classList.contains('show')){
+    const mainBars = document.getElementById('main-bars');
+    mainBars.classList.add('hide');
+  }
 }
 
   return (
@@ -29,10 +34,10 @@ const showMenu = () => {
       </div>
       <div className='navbar'>
       <div className="logo"><a href="/"><img src={Logo} alt='logo' className='logo-img'/></a></div>
-        <FontAwesomeIcon icon={faBars} className='bars' onClick={showMenu}/>
+        <FontAwesomeIcon icon={faBars} className='bars' id="main-bars" onClick={showMenu}/>
         <div className="nav-list">     
           <ul>
-          <a href=""><li>About Me</li></a>
+            <a href=""><li>About Me</li></a>
             <a href=""><li>My Work</li></a>
             <a href=""><li>Contact Me</li></a>
             <a href="../frankie-adams-dev.pdf" target="_blank" className='resume'><li>Resume</li></a>

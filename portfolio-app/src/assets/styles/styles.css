@@ -2,6 +2,7 @@
 
 :root {
   --font-family: 'Inconsolata', monospace;
+  --light-green: rgb(95, 202, 100);
 }
 
 *, *::before, *::after {
@@ -23,7 +24,11 @@ body {
 
 /* Common styles */
 .h4-header {
-  color:rgb(95, 202, 100);
+  color: var(--light-green)
+}
+
+.light-green {
+  color: var(--light-green)
 }
 
 .large-header {
@@ -52,6 +57,10 @@ body {
 
 .mb-4 {
  margin-bottom: 40px;
+}
+
+.hide {
+  display: none;
 }
 
 /* Navbar Styles */
@@ -236,6 +245,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
+  margin-bottom: 10%;
 }
 
 .websites a{
@@ -255,9 +265,65 @@ body {
   margin-top: 20px;
 }
 
+/* Styles for Contact Section */
+.form-group-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+  width: 75%;
+}
 
+.input-field {
+  border: none;
+  background:rgb(0, 47, 54);
+  border-bottom: solid rgb(95, 202, 100) 1px;
+  color: #fff;
+  font-family: var(--font-family);
+  padding: 10px;
+}
 
+.form-group-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  width: 75%;
+  margin-bottom: 5%;
+}
 
+.text-box {
+  border: none;
+  background:rgb(0, 47, 54);
+  border-bottom: solid rgb(95, 202, 100) 1px;
+  color: #fff;
+  font-family: var(--font-family);
+  padding: 10px;
+}
+
+.input-field:focus {
+  border: none;
+}
+
+.contact-section{ 
+  margin-bottom: 10%;
+}
+
+.submit-btn {
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  background: rgb(53, 99, 107);
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  opacity: 0.4;
+}
 
 
 
@@ -303,4 +369,12 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .websites {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-group-2 {
+    grid-template-columns: 1fr;
+  }
 }
